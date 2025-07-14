@@ -7,7 +7,7 @@ class DataDictionary:
     Quellen: 
         https://www-genesis.destatis.de
         https://www.datenportal.bmbf.de/portal/de/G122.html
-    Tabellen: 23111-0001,  23121-0001,23611
+    Tabellen: 23111-*,  23121-*,  23111-*, 23611-*
     Grunddaten der Krankenhäuser
     Deutschland
     """
