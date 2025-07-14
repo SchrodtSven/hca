@@ -1,17 +1,17 @@
-
-# Data dictionary class 
+# Data dictionary class
 # Projekt Health Care Analysis
 # AUTHOR Sven Schrodt
 # SINCE 2025-07-11
 class DataDictionary:
-
-    
-    """_summary_
-        Quelle: https://www-genesis.destatis.de
-        Tabellen: 23111-0001,  23121-0001,23611 
-        Grunddaten der Krankenhäuser
-        Deutschland
+    """ Data Dictionary 
+    Quellen: 
+        https://www-genesis.destatis.de
+        https://www.datenportal.bmbf.de/portal/de/G122.html
+    Tabellen: 23111-0001,  23121-0001,23611
+    Grunddaten der Krankenhäuser
+    Deutschland
     """
+
     raw = {
         "jahr": "Jahr",
         "anz_kh": "Krankenhäuser",
@@ -34,13 +34,48 @@ class DataDictionary:
         "kosten_ber": "Bereinigte Kosten",
         "kst_kh": "Bereinigte Kosten je Krankenhaus",
         "kst_fall": "Bereinigte Kosten je Behandlungsfall",
+        "st": "stichtag",
+        "insg": "Personal",
+        "hau_a": "Hauptamtliche Ärzte",
+        "na_p,na_p_pfleg": "Nichtärztliches Personal",
     }
 
+    land = {
+        "BB": "Brandenburg",
+        "BE": "Berlin",
+        "BW": "Baden-Württemberg",
+        "BY": "Bayern",
+        "HB": "Bremen",
+        "HE": "Hessen",
+        "HH": "Hamburg",
+        "MV": "Mecklenburg-Vorpommern",
+        "NI": "Niedersachsen",
+        "NW": "Nordrhein-Westfalen",
+        "RP": "Rheinland-Pfalz",
+        "SH": "Schleswig-Holstein",
+        "SL": "Saarland",
+        "SN": "Sachsen",
+        "ST": "Sachsen-Anhalt",
+        "TH": "Thüringen"
+    }
+    
+    land_flp = {v: k for k, v in land.items()}
+
     @staticmethod
-    def trans(key: str):
+    def trans(key: str)-> str:
         if key in DataDictionary.raw:
             return DataDictionary.raw[key]
         else:
             raise ValueError(f"Non-existent key {key}!")
 
-
+    def land_lng(key:str)-> str:
+        if key in DataDictionary.land:
+            return DataDictionary.land[key]
+        else:
+            raise ValueError(f"Non-existent key {key}!")
+        
+    def land_abbr(key:str)-> str:
+        if key in DataDictionary.land_flp:
+            return DataDictionary.land_flp[key]
+        else:
+            raise ValueError(f"Non-existent key {key}!")
