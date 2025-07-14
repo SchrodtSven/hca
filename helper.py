@@ -1,3 +1,22 @@
+# Data dictionary class
+# Projekt Health Care Analysis
+# AUTHOR Sven Schrodt
+# SINCE 2025-07-14 - Allons enfants!
+
+class Helper:
+    def flip_dct(dct:dict):
+        """ Flipping key <-> value of a Dictionary
+
+        Args:
+            dct (dict): _description_
+
+        Returns:
+            _type_: _description_
+        """
+       return  {v: k for k, v in dct.items()}
+
+
+
 a = "st;insg;hau_a;na_p,na_p_pfleg"
 b = "stichtag;Personal;Hauptamtliche Ärzte;Nichtärztliches Personal;Nichtärztliches Personal im Pflegedienst"
 

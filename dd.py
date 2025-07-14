@@ -16,7 +16,7 @@ class DataDictionary:
         "jahr": "Jahr",
         "anz_kh": "Krankenhäuser",
         "bett": "Betten",
-        "bett_:100k": "Betten je 100.000 Einwohner",
+        "bett_100k": "Betten je 100.000 Einwohner",
         "pat": "Patienten",
         "pat_100k": "Patienten je 100.000 Einwohner",
         "ber_bch": "Berechnungs-/Belegungstage",
