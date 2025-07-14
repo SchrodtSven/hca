@@ -13,7 +13,7 @@ class Helper:
         Returns:
             _type_: _description_
         """
-       return  {v: k for k, v in dct.items()}
+        return  {v: k for k, v in dct.items()}
 
 
 
@@ -61,4 +61,8 @@ from dd import DataDictionary as dd
 
 #land_flp = {v: k for k, v in DataDictionary.land.items()}
 
-print (dd.land_abbr('Baden-Württemberg'))
+#print (dd.land_abbr('Baden-Württemberg'))
+
+
+foo = 'anz_kh;bett;bett_:100k;pat_100k;ber_bch;verweil_dschn;bett_aus_dschn'
+
