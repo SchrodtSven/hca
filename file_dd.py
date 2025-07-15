@@ -7,3 +7,7 @@ class FileDD:
     
     # Diagnosen DE ins.
     de_icdn = 'data/23131-0001_de_2_san.csv'
+    
+    codes = {
+        'GES025': 'Entlassene Patienten',
+        }

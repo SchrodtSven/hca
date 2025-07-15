@@ -21,22 +21,25 @@ sel_keys = [
     "statistics_code",
     "time",
     "1_variable_code",
+    "2_variable_code",
     "2_variable_attribute_code",
-    "value",
-    "value_unit",
-    "value_variable_code",
-    "value_variable_label",
+    "value" 
+    
     
 ]
 
+target = 'data/Diag_GES025_DE_2014-2023.csv'
+
+df = pd.read_csv('data/23131-0001_de_flat 2.csv', sep=";")
+#df.sort_values(by=['time',  '2_variable_attribute_code'], inplace=True)
+ex = df[sel_keys]
+print(ex.head(10))
+
+ex.to_csv(target, index=False)
 
 
-df = pd.read_csv('data/23131-0001_de_2_san.csv')
-df.sort_values(by=['time',  '2_variable_attribute_code'], inplace=True)
-
-print(df.head(10))
-print(df.tail(10))
-print(len(df))
+#print(df['2_variable_code'].unique())
+#print(len(df))
 
 
 
