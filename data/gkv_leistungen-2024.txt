@@ -1,0 +1,14 @@
+GKV-Leistungsausgaben nach Leistungsbereichen, in Milliarden EUR und Anteil in Prozent, 2024Leistungsbereiche	Anteil in %	Ausgaben in Mrd. EUR
+Zahnärztl. Behandlung o. ZE	4,5	14,0
+Zahnersatz (ZE)	1,3	4,2
+Ärztliche Behandlung	16,1	50,3
+Rettungsdienst	2,4	7,5
+Arzneimittel	17,7	55,2
+Krankenhausbehandlung	32,7	102,2
+Heilmittel	4,3	13,3
+Hilfsmittel	3,8	11,7
+Krankengeld	6,6	20,5
+Vorsorge / Reha	1,5	4,6
+Prävention / Selbsthilfe / Soziale Dienste	1,3	4,2
+übrige Leistungen	7,9	24,6
+Leistungsausgaben insgesamt	100,0	312,3

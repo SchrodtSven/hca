@@ -1,3 +1,8 @@
+# Template für Dash page
+# Projekt Health Care Analysis
+# AUTHOR Sven Schrodt
+# SINCE 2025-07-15
+
 import dash_mantine_components as dmc
 from dash import Dash, html, dash_table, dcc, callback, Output, Input
 import pandas as pd
@@ -5,27 +10,22 @@ import plotly.express as px
 import dash_bootstrap_components as dbc
 from dd import DataDictionary as dd
 
-df_s = pd.read_csv("data/23111-0001_de_san.csv", sep=";")
-# Keys: 'anz_kh', 'bett', 'bett_100k','pat_100k', 'ber_bch', 'verweil_dschn', 'bett_aus_dschn'
-cols = ['anz_kh', 'bett', 'bett_100k','pat_100k']
-dta = [{'label':' ' +dd.raw[k] + ' ', 'value':k } for k in cols]
-app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
-#app = Dash()
-# App layout'
-fig = px.line(df_s, x="jahr", y=['anz_kh','bett_100k'])
+df = pd.read_csv()
+# fig = px
+app = Dash()
 
 app.layout = [
-    html.H1(children="Grunddaten der Krankenhäuser", className="m-5"),
+    html.H1(children="Grunddaten der Krankenhäuser", className="app-header",),
     html.Hr(),
     dash_table.DataTable(
-        data=df_s.to_dict("records"),
-        columns=[{"name": i, "id": i} for i in df_s.columns],
+        data=df.to_dict("records"),
+        columns=[{"name": i, "id": i} for i in df.columns],
         page_size=3,
         style_header={"backgroundColor": "rgb(30, 30, 30)", "color": "white"},
         style_data={"backgroundColor": "rgb(50, 50, 50)", "color": "white"},
     ),
-    dcc.Checklist(options=dta, id='controls-and-check-item', value=['bett'], inline=True),
-    dcc.Graph(figure=fig, id="controls-and-graph"),
+    #dcc.Checklist(options=dta, id='controls-and-check-item', value=['bett'], inline=True),
+    #dcc.Graph(figure=fig, id="controls-and-graph"),
     
 ]
 

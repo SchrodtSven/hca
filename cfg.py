@@ -6,3 +6,5 @@
 class Cfg:
     
     title = "Health Care Analysis"
+    
+    

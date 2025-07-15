@@ -3,7 +3,28 @@
 # AUTHOR Sven Schrodt
 # SINCE 2025-07-14 - Allons enfants!
 
-class Helper:
+class Sanitizer:
+    """ Sammlung von Methoden zur Datenbereinigung
+
+    Returns:
+        _type_: _description_
+    """
+    @staticmethod
+    def germ_iso(dte:str):
+        pass
+
+
+
+class DataHelper:
+    """ Sammlung von Methoden zum Umgang mit Daten
+        - Transposition
+        - Flipping
+        - tbd ... 
+
+    Returns:
+        _type_: _description_
+    """
+    @staticmethod
     def flip_dct(dct:dict):
         """ Flipping key <-> value of a Dictionary
 
@@ -16,53 +37,4 @@ class Helper:
         return  {v: k for k, v in dct.items()}
 
 
-
-a = "st;insg;hau_a;na_p,na_p_pfleg"
-b = "stichtag;Personal;Hauptamtliche Ärzte;Nichtärztliches Personal;Nichtärztliches Personal im Pflegedienst"
-
-
-al = a.split(";")
-bl = b.split(";")
-
-dct = dict(zip(al, bl))
-
-# print(dct)
-
-
-dct = {
-    "BW": "Baden-Württemberg",
-    "BY": "Bayern",
-    "BE": "Berlin",
-    "BB": "Brandenburg",
-    "HB": "Bremen",
-    "HH": "Hamburg",
-    "HE": "Hessen",
-    "MV": "Mecklenburg-Vorpommern",
-    "NI": "Niedersachsen",
-    "NW": "Nordrhein-Westfalen",
-    "RP": "Rheinland-Pfalz",
-    "SL": "Saarland",
-    "SN": "Sachsen",
-    "ST": "Sachsen-Anhalt",
-    "SH": "Schleswig-Holstein",
-    "TH": "Thüringen",
-}
-
-import collections
-
-
-
-od = collections.OrderedDict(sorted(dct.items()))
-
-#print(od)
-
-
-from dd import DataDictionary as dd
-
-#land_flp = {v: k for k, v in DataDictionary.land.items()}
-
-#print (dd.land_abbr('Baden-Württemberg'))
-
-
-foo = 'anz_kh;bett;bett_:100k;pat_100k;ber_bch;verweil_dschn;bett_aus_dschn'
 

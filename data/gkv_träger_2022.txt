@@ -1,0 +1,11 @@
+Gesundheitsausgaben, in Milliarden Euro und Anteil in Prozent, 2022Ausgabenträger	Anteil in Prozent	Ausgaben in Milliarden Euro
+Öffentliche Haushalte	9,77	48,67
+GKV	53,31	265,55
+SPV	11,58	57,66
+Gesetzliche Rentenversicherung	1,05	5,23
+Gesetzliche Unfallversicherung	1,26	6,28
+Private Haushalte	11,67	58,11
+Private Krankenversicherung	7,66	38,13
+Arbeitgeber	3,71	18,50
+insgesamt	100,00	498,13
+
