@@ -12,13 +12,13 @@ sub_title = "Entwicklung der Krankenhaus- und Bettenanzahl"
 
 
 
-cols = ["anz_kh", "bett_100k", "pat_100k"]
-cols_tb = ["anz_kh", "bett_100k", "pat_100k", "jahr"]
-df = pd.read_csv("data/23111-0001_de_san.csv", sep=";")[cols_tb]
-
+df = pd.read_csv("data/träger_1991-2020.csv", sep=";")
+cols_tb = df.keys()
+cols = ['öffentlich', 'freigemeinnützig', 'privat']
+ 
 opt = [{"label": " " + dd.raw[k] + " (" + k + ") ", "value": k} for k in cols]
 # Anfangsbelegung
-start_val = ["anz_kh"]
+start_val = ["ins"]
 
 fig = px.line(df, x="jahr", y=start_val)
 
@@ -27,8 +27,8 @@ register_page(__name__)
 
 # fig.add_bar(df, x='jahr', y='insg')
 @callback(
-    Output(component_id="controls-and-graph", component_property="figure"),
-    Input(component_id="controls-and-check-item-basix", component_property="value"),
+    Output(component_id="controls-and-graph-traeg", component_property="figure"),
+    Input(component_id="controls-and-check-item-traeg", component_property="value"),
 )
 def update_graph(col_chosen):
     fig = px.line(df, x="jahr", y=col_chosen)
@@ -45,14 +45,9 @@ layout = html.Div(
             columnSize="responsiveSizeToFit",
             dashGridOptions={'pagination':True},
         ),
-        # dash_table.DataTable(
-        #     data=df.to_dict("records"),
-        #     columns=[{"name":dd.raw[i], "id": i} for i in df.columns],
-        #     page_size=5
-        # ),
         dcc.Checklist(
-            options=opt, id="controls-and-check-item-basix", value=start_val, inline=True
+            options=opt, id="controls-and-check-item-traeg", value=start_val, inline=True
         ),
-        dcc.Graph(figure=fig, id="controls-and-graph")
+        dcc.Graph(figure=fig, id="controls-and-graph-traeg")
     ]
 )

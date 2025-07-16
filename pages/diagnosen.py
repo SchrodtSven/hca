@@ -18,7 +18,7 @@ sub_title = "Diagnosen Deutschland insgesamt"
 
 
 @callback(
-    Output("output-container-range-slider", "children"),
+    Output("output-container-range-slider-diag", "children"),
     Input("year-range-slider", "value"),
 )
 def update_output(value):
@@ -40,8 +40,8 @@ layout = html.Div(
             id="year-range-slider",
             marks={i: "{}".format(i) for i in range(min, max+1)},
         ),
-        html.P(f"MIN: {min} max: {max}"),
-        html.Div(id="output-container-range-slider"),
+        html.P(f"git sttMIN: {min} max: {max}"),
+        html.Div(id="output-container-range-slider-diag"),
         dag.AgGrid(
             rowData=df_diag.to_dict("records"),
             columnDefs= [{"field": x, "headerName": x.capitalize() } for x in df_diag.columns],
