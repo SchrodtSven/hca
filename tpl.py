@@ -25,12 +25,12 @@ app.layout = [
         style_data={"backgroundColor": "rgb(50, 50, 50)", "color": "white"},
     ),
     #dcc.Checklist(options=dta, id='controls-and-check-item', value=['bett'], inline=True),
-    #dcc.Graph(figure=fig, id="controls-and-graph"),
+    #dcc.Graph(figure=fig, id="t_controls-and-graph"),
     
 ]
 
 @callback(
-    Output(component_id="controls-and-graph", component_property="figure"),
+    Output(component_id="t_controls-and-graph", component_property="figure"),
     Input(component_id="controls-and-check-item", component_property="value"),
 )
    

@@ -9,7 +9,7 @@ class DataDictionary:
         Tabellen: 23111-*,  23121-*,  23111-*, 23611-*
         https://www.datenportal.bmbf.de
         https://opendata.rvr.ruhr/
-    
+
     Grunddaten der Krankenhäuser
     Deutschland
     """
@@ -47,6 +47,13 @@ class DataDictionary:
         "genesen": "Genesen",
         "verstorben": "Verstorben",
         "holy_inzidenz": "Inzidenzwert",
+        "ins": "Insgesamt",
+        "öffentlich": "Öffentlich",
+        "a_teil": "Öff. %",
+        "freigemeinnützig": "Freigemeinnützig",
+        "f_teil": "Fr. %",
+        "privat": "Privat",
+        "pr_teil": "Pr. %",
     }
 
     land = {
@@ -67,7 +74,7 @@ class DataDictionary:
         "ST": "Sachsen-Anhalt",
         "TH": "Thüringen",
         "DE": "Deutschland",
-        "n/a": "Ausland"
+        "n/a": "Ausland",
     }
 
     land_flp = {v: k for k, v in land.items()}
