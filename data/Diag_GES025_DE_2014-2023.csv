@@ -1,4 +1,4 @@
-statistics_code,jahr,1_variable_code,2_variable_code,2_variable_attribute_code,anzahl
+statistics_code,jahr,1_variable_code,2_variable_code,ICD-2,anzahl
 23131,2021,DINSG,ICD10B,ICD10-Z00-Z13,46728
 23131,2014,DINSG,ICD10B,ICD10-D60-D64,36917
 23131,2017,DINSG,ICD10B,ICD10-F99-F99,189

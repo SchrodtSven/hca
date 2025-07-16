@@ -66,6 +66,8 @@ class DataDictionary:
         "SN": "Sachsen",
         "ST": "Sachsen-Anhalt",
         "TH": "Thüringen",
+        "DE": "Deutschland",
+        "n/a": "Ausland"
     }
 
     land_flp = {v: k for k, v in land.items()}

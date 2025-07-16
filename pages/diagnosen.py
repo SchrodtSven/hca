@@ -6,10 +6,6 @@ from dash import Dash, html, dash_table, dcc, callback, Output, Input, register_
 import plotly.express as px
 import dash_ag_grid as dag
 import pandas as pd
-
-# from dd import DataDictionary as dd
-
-
 sel_cols = ["jahr", "2_variable_attribute_code", "anzahl"]
 
 df_diag = pd.read_csv("data/Diag_GES025_DE_2014-2023.csv")
@@ -26,7 +22,11 @@ sub_title = "Diagnosen Deutschland insgesamt"
     Input("year-range-slider", "value"),
 )
 def update_output(value):
-    return 'You have selected "{}"'.format(value)
+    a = value[0]
+    b = value[1]
+    if a > b:
+        a, b = b,a
+    return 'Aktuelle Auswahl: "{} bis {}"'.format(a, b)
 
 
 layout = html.Div(

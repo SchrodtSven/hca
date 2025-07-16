@@ -9,10 +9,14 @@ import dash_ag_grid as dag
 from dd import DataDictionary as dd
 
 sub_title = "Entwicklung der Krankenhaus- und Bettenanzahl"
-df = pd.read_csv("data/23111-0001_de_san.csv", sep=";")
-cols = ["anz_kh", "bett_100k", "pat_100k"]
 
-dta = [{"label": " " + dd.raw[k] + " (" + k + ") ", "value": k} for k in cols]
+
+
+cols = ["anz_kh", "bett_100k", "pat_100k"]
+cols_tb = ["anz_kh", "bett_100k", "pat_100k", "jahr"]
+df = pd.read_csv("data/23111-0001_de_san.csv", sep=";")[cols_tb]
+
+opt = [{"label": " " + dd.raw[k] + " (" + k + ") ", "value": k} for k in cols]
 # Anfangsbelegung
 start_val = ["anz_kh"]
 
@@ -37,7 +41,8 @@ layout = html.Div(
         dag.AgGrid(
             id="main_grid_basic",
             rowData=df.to_dict("records"),
-            columnDefs= [{"field": x, "headerName": x.capitalize() } for x in df.columns],
+            columnDefs= [{"field": x, "headerName": dd.raw[x]} for x in df.columns],
+            columnSize="responsiveSizeToFit",
             dashGridOptions={'pagination':True},
         ),
         # dash_table.DataTable(
@@ -46,7 +51,7 @@ layout = html.Div(
         #     page_size=5
         # ),
         dcc.Checklist(
-            options=dta, id="controls-and-check-item", value=start_val, inline=True
+            options=opt, id="controls-and-check-item", value=start_val, inline=True
         ),
         dcc.Graph(figure=fig, id="controls-and-graph")
     ]
