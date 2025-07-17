@@ -24,8 +24,8 @@ class DataDictionary:
         "pat_100k": "Patienten je 100.000 Einwohner",
         "pat_10k": "Patienten je 10.000 Einwohner",
         "ber_bch": "Berechnungs-/Belegungstage",
-        "verweil_dschn": "Durchschnittliche Verweildauer",
-        "bett_aus_dschn": "Durchschnittliche Bettenauslastung",
+        "verweil_dschn": "⌀ Verweildauer",
+        "bett_aus_dschn": "⌀ Bettenauslastung",
         "oef_h": "Öffentliche Haushalte",
         "gkv": "Gesetzliche Krankenversicherung",
         "spv": "Soziale Pflegeversicherung",
@@ -78,6 +78,8 @@ class DataDictionary:
         "DE": "Deutschland",
         "n/a": "Ausland",
     }
+    
+    
 
     land_flp = {v: k for k, v in land.items()}
 

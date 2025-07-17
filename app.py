@@ -37,7 +37,7 @@ app = Dash(
     suppress_callback_exceptions=True,
 )
 app.title = "Health Care Analysis"
-dash.register_page(__name__)
+#dash.register_page(__name__)
 navbar = dbc.NavbarSimple(
     [
         dbc.DropdownMenu(
@@ -58,7 +58,7 @@ navbar = dbc.NavbarSimple(
 
 app.layout = dbc.Container([navbar, page_container], fluid=True, className="dbc")
 
-app.server.route('/')
+#app.server.route('/')
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")

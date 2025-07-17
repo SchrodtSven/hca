@@ -15,6 +15,7 @@ class FileDD:
 
     pages = {
         "  main  ": "Startseite",
+        "Fall bula": "Fallzahlen nach Bundesl.",
         "Admin": "Admin",
         "Diagnosen": "ICD-Code",
         "Downloads": "Downloads",
@@ -24,4 +25,7 @@ class FileDD:
         "Khg foerderung": "KHG-Förderungen",
         "Traeger": "Krankenhäuser nach Trägerschaft",
         "Covid 19": "Covid-19",
+        "Basix": "KH-Grunddaten (1991 - 2023)",
+        "Gkv hist": "Entwicklung GKV (1994 -2023)"
+        
     }

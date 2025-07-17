@@ -9,20 +9,17 @@ import dash_ag_grid as dag
 from dd import DataDictionary as dd
 
 sub_title = "Covid - nach Bundesland"
-
-
-df = pd.read_csv("data/covid22-23.csv")
-start_val= 'Bayern'
-
-opt = [{"label": k,  "value": k} for k in df.Bundesland.unique()]
-# Anfangsbelegung
- 
-
-
-fig = px.line(df[df.Bundesland == start_val], x="Datum", y='Betten', color='Bettenart')
- 
-
 register_page(__name__)
+
+df = pd.read_csv("data/covid22-23.csv", parse_dates=True)
+start_val= ['Bayern', 'Hamburg']
+print(df[df.Bundesland.isin(start_val)])
+opt = [{"label": k,  "value": k} for k in df.Bundesland.unique()]
+
+fig = px.line(data_frame=df[df.Bundesland.isin(start_val)].iloc[::5], x="Datum", y='Betten', color='Bettenart')
+
+
+
 
 
  
@@ -31,8 +28,7 @@ register_page(__name__)
     Input(component_id="controls-and-check-item-c19", component_property="value"),
 )
 def update_graph(col_chosen):
-    print(col_chosen)
-    fig = px.line(df[df.Bundesland.isin([col_chosen])], x="Datum", y='Betten', color='Bettenart')
+    fig = px.line(data_frame=df[df.Bundesland.isin(col_chosen)].iloc[::5], x="Datum", y='Betten', color='Bettenart')
     return fig
 
 
@@ -46,17 +42,11 @@ layout = html.Div(
             columnSize="responsiveSizeToFit",
             dashGridOptions={"pagination": True},
         ),
-        # dcc.Checklist(
-        #     options=opt,
-        #     id="controls-and-check-item-traeg",
-        #     value=start_val,
-        #     inline=True,
-        # ),
         dcc.Dropdown(
                     id="controls-and-check-item-c19",
                     options=opt, #[{"label": dd.land_abbr(x), "value": x} for x in land],
-                    value=[start_val],
-                    multi=False,
+                    value=start_val,
+                    multi=True,
                 ),
         dcc.Graph(figure=fig, id="controls-and-graph-c19"),
     ]
