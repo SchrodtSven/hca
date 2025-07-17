@@ -41,6 +41,7 @@ layout = [
     )
 
 def update_graph(land_chosen):
-    fig = px.bar(df_bl, x="jahr", y=land_chosen)
+    fig = px.line(df_bl, x="jahr", y=start_v)
+    #fig.add_bar(df_bl["jahr"], y=df_bl[land_chosen])
     print(land_chosen)
     return fig

@@ -76,6 +76,7 @@ class DataDictionary:
         "ST": "Sachsen-Anhalt",
         "TH": "Thüringen",
         "DE": "Deutschland",
+        "DE-Σ": "DE-Summe",
         "n/a": "Ausland",
     }
     

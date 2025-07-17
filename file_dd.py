@@ -26,6 +26,8 @@ class FileDD:
         "Traeger": "Krankenhäuser nach Trägerschaft",
         "Covid 19": "Covid-19",
         "Basix": "KH-Grunddaten (1991 - 2023)",
-        "Gkv hist": "Entwicklung GKV (1994 -2023)"
+        "Gkv hist": "Entwicklung GKV (1994 -2023)",
+        "Kh pat": "Patienten vs. Krankenhäuser",
+        "Dad": "Dash-Architektur"
         
     }

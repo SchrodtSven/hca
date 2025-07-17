@@ -22,12 +22,12 @@ layout = html.Div(
     [   
         html.H1(sub_title),
         #html.Div(' '.join(lgd_dta)),
-        dcc.Dropdown(
-                    id="vollk-drop",
-                    options = options,
-                    value=['haus_a'],
-                    multi=True,
-                ),
+        # dcc.Dropdown(
+        #             id="vollk-drop",
+        #             options = options,
+        #             value=['haus_a'],
+        #             multi=True,
+        #         ),
         dcc.Graph(id="bar-chart", figure=fig)
     ]
 )

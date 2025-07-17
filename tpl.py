@@ -7,7 +7,7 @@ import plotly.express as px
 import pandas as pd
 import dash_ag_grid as dag
 from dd import DataDictionary as dd
-
+import seaborn 
 sub_title = "Entwicklung der Krankenhaus- und Bettenanzahl"
 
 
