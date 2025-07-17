@@ -1,6 +1,6 @@
 # Template für Dash page
 # Projekt Health Care Analysis
-# AUTHOR Sven Schrodt
+# AUTHOR Nadja Post, Sven Schrodt 
 # SINCE 2025-07-15
 
 import dash_mantine_components as dmc

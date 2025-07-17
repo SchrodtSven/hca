@@ -1,12 +1,12 @@
 # "Baustellendatei zur Datenbereinigung"
 # Projekt Health Care Analysis
-# AUTHOR Sven Schrodt
+# AUTHOR Nadja Post, Sven Schrodt 
 # SINCE 2025-07-14 - Allons enfants!
-from helper import DataHelper
-from helper import Sanitizer
+from tmp.helper import DataHelper
+from tmp.helper import Sanitizer
 import pandas as pd
 from dd import DataDictionary as dd
-from helper import DataHelper
+from tmp.helper import DataHelper
 
 
 

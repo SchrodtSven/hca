@@ -1,13 +1,27 @@
 # Klasse als Data Dictionary für die Zuordnung:
-# Tablle - Bedeutung - rel. Dateiort
+#   - Tabelle - Bedeutung - rel. Dateior
+#   - pages{FILENAME} -> Texin Navi
 # Projekt Health Care Analysis
-# AUTHOR Sven Schrodt
+# AUTHOR Nadja Post, Sven Schrodt
 # SINCE 2025-07-14 - Allons enfants!
 class FileDD:
-    
+
     # Diagnosen DE ins.
-    de_icdn = 'data/23131-0001_de_2_san.csv'
-    
+    de_icdn = "data/23131-0001_de_2_san.csv"
+
     codes = {
-        'GES025': 'Entlassene Patienten',
-        }
+        "GES025": "Entlassene Patienten",
+    }
+
+    pages = {
+        "  main  ": "Startseite",
+        "Admin": "Admin",
+        "Diagnosen": "ICD-Code",
+        "Downloads": "Downloads",
+        "Entw vollkr": "Entwicklung der Vollkräfte ",
+        "Grunddaten kh": "KH-Grunddaten",
+        "Kh bula": "KH - Bundesländer",
+        "Khg foerderung": "KHG-Förderungen",
+        "Traeger": "Krankenhäuser nach Trägerschaft",
+        "Covid 19": "Covid-19",
+    }

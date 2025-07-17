@@ -1,6 +1,6 @@
 # Data dictionary class
 # Projekt Health Care Analysis
-# AUTHOR Sven Schrodt
+# AUTHOR Nadja Post, Sven Schrodt 
 # SINCE 2025-07-14 - Allons enfants!
 from dash import Dash, html, dash_table, dcc, callback, Output, Input, register_page
 import plotly.express as px
@@ -12,10 +12,11 @@ sub_title = "Entwicklung der Krankenhaus- und Bettenanzahl"
 
 
 
-cols = ["anz_kh", "bett_100k", "pat_100k"]
+cols = ["anz_kh", "bett_10k", "pat_10k"]
 cols_tb = ["anz_kh", "bett_100k", "pat_100k", "jahr"]
 df = pd.read_csv("data/23111-0001_de_san.csv", sep=";")[cols_tb]
-
+df['bett_10k']=df['bett_100k'] /10
+df['pat_10k']= df['pat_100k'] / 10
 opt = [{"label": " " + dd.raw[k] + " (" + k + ") ", "value": k} for k in cols]
 # Anfangsbelegung
 start_val = ["anz_kh"]
@@ -41,7 +42,7 @@ layout = html.Div(
         dag.AgGrid(
             id="main_grid_basic",
             rowData=df.to_dict("records"),
-            columnDefs= [{"field": x, "headerName": dd.raw[x]} for x in df.columns],
+            columnDefs= [{"field": x, "headerName": dd.raw[x]} for x in cols], #df.columns],
             columnSize="responsiveSizeToFit",
             dashGridOptions={'pagination':True},
         ),
@@ -50,9 +51,15 @@ layout = html.Div(
         #     columns=[{"name":dd.raw[i], "id": i} for i in df.columns],
         #     page_size=5
         # ),
-        dcc.Checklist(
-            options=opt, id="controls-and-check-item-basix", value=start_val, inline=True
-        ),
+        # dcc.Checklist(
+        #     options=opt, id="controls-and-check-item-basix", value=start_val, inline=True
+        # ),
+         dcc.Dropdown(
+                    id="controls-and-check-item-basix",
+                    options=opt,
+                    value=start_val,
+                    multi=True,
+                ),
         dcc.Graph(figure=fig, id="controls-and-graph")
     ]
 )

@@ -1,6 +1,6 @@
 # Data dictionary class
 # Projekt Health Care Analysis
-# AUTHOR Sven Schrodt
+# AUTHOR Nadja Post, Sven Schrodt 
 # SINCE 2025-07-11
 class DataDictionary:
     """Data Dictionary
@@ -19,8 +19,10 @@ class DataDictionary:
         "anz_kh": "Krankenhäuser",
         "bett": "Betten",
         "bett_100k": "Betten je 100.000 Einwohner",
+        "bett_10k": "Betten je 10.000 Einwohner",
         "pat": "Patienten",
         "pat_100k": "Patienten je 100.000 Einwohner",
+        "pat_10k": "Patienten je 10.000 Einwohner",
         "ber_bch": "Berechnungs-/Belegungstage",
         "verweil_dschn": "Durchschnittliche Verweildauer",
         "bett_aus_dschn": "Durchschnittliche Bettenauslastung",
