@@ -10,15 +10,14 @@ classDiagram
     class AppMain{
         + __init__(self, root)
         ...
-        + workbench(self)
+        
    }
 
     
 
    class TableHelper{
     + __init__(self)
-    + get_table(self, context, topic = 'customers')
-    + read_data(sel, topic)
+    ...
    }
 
     
@@ -27,9 +26,11 @@ classDiagram
 
     AppMain  --|> DataProvider
 
-    AppMain  --|> pandas
-    AppMain--|> TableHelper
-    TableHelper --|> pandastable.Table
+    AppMain  --|> pandas.df
+    pandas.df --|> Sanitzer
+    Sanitzer --|> TableHelper
+    TableHelper --|> pandas.table
+
 
 
 ```
