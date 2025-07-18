@@ -16,9 +16,9 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import geopandas as gpd
 import contextily as ctx
+
+
 import base64
-from pathlib import Path
-contents = Path('doq/dad2.md').read_text()
 
 image_path = 'assets/dash_b.png'
 register_page(__name__)
@@ -78,9 +78,7 @@ SUM:                           48            336             372           8736
 
 
                      """)
-        ),
-        html.H4('Sequenzdiagramm'),
-        dcc.Markdown(contents)
+        )
      
     ]
 )
