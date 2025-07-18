@@ -17,10 +17,13 @@ from plotly.subplots import make_subplots
 import geopandas as gpd
 import contextily as ctx
 import base64
+from file_dd import FileDD
+from cfg import Cfg
 
 image_path = 'assets/dash_b.png'
 mt = 'assets/mtier_rere_small.png'
-register_page(__name__)
+if Cfg.debug:
+    register_page(__name__)
 # Using base64 encoding and decoding
 def b64_image(image_filename):
     with open(image_filename, 'rb') as f:

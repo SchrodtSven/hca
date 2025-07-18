@@ -23,7 +23,7 @@ load_figure_template(["sandstone", "simplex"])
 
 # project libs
 from file_dd import FileDD
- 
+from cfg import Cfg
 
 # This stylesheet defines the "dbc" class.  Use it to style dash-core-components
 # and the dash DataTable with the bootstrap theme.
@@ -35,7 +35,7 @@ app = Dash(
     external_stylesheets=[dbc.themes.FLATLY, dbc_css],
     suppress_callback_exceptions=True,
 )
-app.title = "Analysen des Gesundheitswesens in DE"
+app.title = Cfg.title
 #dash.register_page(__name__)
 navbar = dbc.NavbarSimple(
     [   
@@ -57,8 +57,6 @@ navbar = dbc.NavbarSimple(
 
 app.layout = dbc.Container([navbar, page_container], fluid=True, className="dbc")
 
-#app.server.route('/')
-
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")
+    app.run(debug=Cfg.debug, host="0.0.0.0")
     
