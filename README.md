@@ -6,6 +6,14 @@ Prosa folgt
 
 # Ausblick / To-Do
 
+
+## ASAP 
+
+- Codestruktur optimieren:
+    - Strikte Trennung von Text-Content, Layout und Charts/Plots
+    - Adminoberfläche mit Verwaltung von Templates für neue Seiten
+
+
 ## Importassistent (div. Quellen: SQL, CSV, XML, APIs)
 - Auswahl der Datenquellen
     - Definition der Regeln für Spalten/Zeilen:
