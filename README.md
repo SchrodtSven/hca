@@ -6,7 +6,7 @@ Prosa folgt
 
 ## Shortcuts
 - [Installation / Setup](doq/setup_install.md)
-- [Schichtenkommunikation - Seqenzdiagramm](doq/dad2.md)
+- [Schichtenkommunikation - Sequenzdiagramm](doq/dad2.md)
 # Ausblick / To-Do
 
 
