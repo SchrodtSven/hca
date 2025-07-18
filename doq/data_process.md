@@ -20,7 +20,7 @@
 - ### Nicht normalisierte bis chaotische Daten
 
 
-<img src="assets/problems.png">
+<img src="../assets/problems.png">
 
 
 ## Lösungswege
