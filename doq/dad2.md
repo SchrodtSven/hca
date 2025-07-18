@@ -8,7 +8,7 @@ autonumber
     participant User-Agent
     end
 
-    box Purple Python & Libs
+    box lightblue Python & Libs
     participant Pandas
     participant Dash
     participant Plotly
