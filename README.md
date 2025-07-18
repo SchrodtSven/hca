@@ -28,7 +28,8 @@ Prosa folgt
     - JSON
     - XML
     - CSV
-- Beyond DataFrame:
+
+- Beyond CSV:
     -  Weitere Persistenzmöglichkeiten: Rel. DBMS, XML, ... 
 
 
