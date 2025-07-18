@@ -2,6 +2,7 @@
 # Projekt Health Care Analysis
 # AUTHOR Nadja Post, Sven Schrodt
 # SINCE 2025-07-14 - Allons enfants!
+
 from dash import Dash, html, dash_table, dcc, callback, Output, Input, register_page
 import plotly.express as px
 import pandas as pd
@@ -14,6 +15,7 @@ sub_title = "Entwicklung der Krankenhaus- und Bettenanzahl"
 df = pd.read_csv("data/23111-0001_de_san.csv", sep=";")
 df["bett_10k"] = df["bett_100k"] / 10
 df["pat_10k"] = df["pat_100k"] / 10
+
 tmp = list(df.columns)
 # Jahr ist obligatorisch (X-Achse)
 del(tmp[0])

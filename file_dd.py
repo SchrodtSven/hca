@@ -31,3 +31,4 @@ class FileDD:
         "Dad": "Dash-Architektur"
         
     }
+# cloc --by-file --fullpath --match-d 'dash'

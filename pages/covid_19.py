@@ -17,11 +17,11 @@ df = pd.read_csv("data/covid22-23.csv", parse_dates=True)
 # exit()
 
 start_val = ["DE-Summe"]
-print(df[df.Bundesland.isin(start_val)])
+#print(df[df.Bundesland.isin(start_val)])
 opt = [{"label": k, "value": k} for k in df.Bundesland.unique()]
-df = df[df.Bundesland.isin(start_val)].iloc[::5]
+ndf = df[df.Bundesland.isin(start_val)].iloc[::5]
 fig = px.line(
-    df, x="Datum", y="Betten", color="Bettenart", 
+    ndf, x="Datum", y="Betten", color="Bettenart", 
 )
 
 
@@ -30,15 +30,14 @@ fig = px.line(
     Input(component_id="controls-and-check-item-c19", component_property="value"),
 )
 def update_graph(col_chosen):
-
-    fig = px.line(
-        data_frame=df[df.Bundesland.isin(col_chosen)].iloc[::5],
+    ndf = df[df.Bundesland.isin(col_chosen)]#.iloc[::5]
+    
+    return px.line(
+        data_frame=ndf,
         x="Datum",
         y="Betten",
         color="Bettenart",
     )
-    return fig
-
 
 layout = html.Div(
     [
