@@ -20,7 +20,7 @@ import contextily as ctx
 
 import base64
 
-image_path = 'assets/dash_a.png'
+image_path = 'assets/dash_b.png'
 register_page(__name__)
 # Using base64 encoding and decoding
 def b64_image(image_filename):
