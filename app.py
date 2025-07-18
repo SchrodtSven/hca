@@ -36,7 +36,7 @@ app = Dash(
     external_stylesheets=[dbc.themes.FLATLY, dbc_css],
     suppress_callback_exceptions=True,
 )
-app.title = "Health Care Analysis"
+app.title = "Analysen des Gesundheitswesens in DE"
 #dash.register_page(__name__)
 navbar = dbc.NavbarSimple(
     [   
