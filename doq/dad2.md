@@ -18,9 +18,10 @@ autonumber
     box gray Datenquellen
     participant CSV
     end
-    rect rgba(35, 8, 146, 1)
-        User-Agent->>Flask: Anfrage URI
-    end
+    
+    User-Agent->>Flask: Anfrage URI
+    Note over User-Agent, Flask: HTTP-Request
+    
     Flask->>Dash: URI parsen
     Dash->>Pandas: Daten anfordern
     Pandas ->> CSV: Daten holen
@@ -30,7 +31,7 @@ autonumber
     Flask --> Flask: Generiere HTML, CSS, Javascript
     rect rgba(4, 43, 14, 1)
     Flask->>User-Agent: Webinhalte liefern
-    
+    Note over User-Agent, Flask: HTTP-Request
     end
 
    
