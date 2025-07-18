@@ -61,5 +61,5 @@ app.layout = dbc.Container([navbar, page_container], fluid=True, className="dbc"
 #app.server.route('/')
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")
-    print(page_registry.values())
+    app.run(debug=False, host="0.0.0.0")
+    
