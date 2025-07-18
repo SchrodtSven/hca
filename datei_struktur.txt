@@ -1,15 +1,4 @@
-# Analyse des Gesundheitswesens mit Python &amp; Dash
-
-Prosa folgt
-
-- [Installation / Setup](doq/setup_install.md)
-
-
-
-# Appendix
-
-## Dateistruktur mit Erläuterungen
-```
+.
 ├── app.py (Start und Bootstrapping der App)
 ├── assets (Verzeichnis für Bilder, Styles etx.)
 ├── data (Datenhauptverzeichnis)
@@ -23,4 +12,3 @@ Prosa folgt
 ├── README.md
 ├── req.txt (Liste der Bibliotheken)
 └── tpl.py (Vorlage/template für Unterseiten)
-```

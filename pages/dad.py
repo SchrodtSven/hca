@@ -19,7 +19,7 @@ import contextily as ctx
 import base64
 
 image_path = 'assets/dash_b.png'
-mt = 'assets/mtier_small.png'
+mt = 'assets/mtier_rere_small.png'
 register_page(__name__)
 # Using base64 encoding and decoding
 def b64_image(image_filename):
@@ -72,7 +72,7 @@ Text                             7              4              0            141
 CSS                              1              2              0             16
 Markdown                         1              0              0              2
 -------------------------------------------------------------------------------
-SUM:                           48            336             372           8736
+SUM:                           48            336             372           2473
 -------------------------------------------------------------------------------
 
 

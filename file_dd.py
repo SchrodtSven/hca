@@ -28,7 +28,9 @@ class FileDD:
         "Basix": "KH-Grunddaten (1991 - 2023)",
         "Gkv hist": "Entwicklung GKV (1994 -2023)",
         "Kh pat": "Patienten vs. Krankenhäuser",
-        "Dad": "Dash-Architektur"
+        "Dad": "Dash-Architektur",
+        "Quelle dta": "Quellen + Datenmanagement",
+        "Z ausblick": "Ausblick"
         
     }
 # cloc --by-file --fullpath --match-d 'dash'

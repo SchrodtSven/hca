@@ -39,7 +39,7 @@ app = Dash(
 app.title = "Health Care Analysis"
 #dash.register_page(__name__)
 navbar = dbc.NavbarSimple(
-    [
+    [   
         dbc.DropdownMenu(
             [
                 dbc.DropdownMenuItem(FileDD.pages[page["name"]], href=page["path"])
@@ -62,3 +62,4 @@ app.layout = dbc.Container([navbar, page_container], fluid=True, className="dbc"
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
+    print(page_registry.values())
