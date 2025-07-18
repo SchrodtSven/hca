@@ -17,10 +17,9 @@ from plotly.subplots import make_subplots
 import geopandas as gpd
 import contextily as ctx
 import base64
-from pathlib import Path
-contents = Path('doq/dad2.md').read_text()
 
 image_path = 'assets/dash_b.png'
+mt = 'assets/mtier_small.png'
 register_page(__name__)
 # Using base64 encoding and decoding
 def b64_image(image_filename):
@@ -80,7 +79,7 @@ SUM:                           48            336             372           8736
                      """)
         ),
         html.H4('Sequenzdiagramm'),
-        dcc.Markdown(contents)
+        html.Img(src=b64_image(mt)),
      
     ]
 )
