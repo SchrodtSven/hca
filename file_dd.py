@@ -30,7 +30,7 @@ class FileDD:
         "Kh pat": "Patienten vs. Krankenhäuser",
         "Dad": "Dash-Architektur",
         "Quelle dta": "Quellen + Datenmanagement",
-        "Z ausblick": "Ausblick"
+        "Ausblick": "Ausblick"
         
     }
 # cloc --by-file --fullpath --match-d 'dash'

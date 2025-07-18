@@ -6,6 +6,7 @@ import pandas as pd
 import dash
 import plotly.express as px
 import plotly.graph_objects as go
+import dash_ag_grid as dag
 import dash_mantine_components as dmc
 from dash import Dash, html, dash_table, dcc, callback, Output, Input, register_page
 import dash_bootstrap_components as dbc
@@ -33,7 +34,7 @@ df_betten_fallz['Fälle pro Bett'] = df_betten_fallz['Fallzahlen'] / df_betten_f
 
 # Bundesländer für Dropdown vorbereiten
 bundeslaender = [{'label': bl, 'value': bl} for bl in df_betten_fallz['Bundesland'].unique()]
-
+start_val = ['Deutschland-Σ']
 layout = [
     html.H1(children="Bettenauslastung nach Bundesländern", className="app-header",),
     html.Hr(),
@@ -42,18 +43,29 @@ layout = [
     dcc.Dropdown(
         id='bundesland-dropdown',
         options=bundeslaender,
-        value=[bl['value'] for bl in bundeslaender],  # Alle Bundesländer standardmäßig ausgewählt
+        value=start_val,    
         multi=True,
         placeholder="Bundesland auswählen...",
         style={'margin-bottom': '20px'}
     ),
+    dag.AgGrid(
+            id="datatable",
+            rowData=df_betten_fallz[df_betten_fallz['Bundesland'].isin([start_val])].to_dict("records"),
+            columnDefs=[
+                # "headerName": dd.raw[x]}
+                {"field": x, "headerName": x}
+                for x in df_betten_fallz.columns
+            ],  # df.columns],
+            columnSize="responsiveSizeToFit",
+            dashGridOptions={"pagination": True},
+        ),
     
-    dash_table.DataTable(
-        id='datatable',
-        data=df_betten_fallz.to_dict("records"),
-        columns=[{"name": i, "id": i} for i in df_betten_fallz.columns],
-        page_size=16,
-    ),
+    # dash_table.DataTable(
+    #     id='datatable',
+    #     data=df_betten_fallz.to_dict("records"),
+    #     columns=[{"name": i, "id": i} for i in df_betten_fallz.columns],
+    #     page_size=16,
+    # ),
     
     dcc.Graph(
         id='combined-chart'
@@ -62,7 +74,7 @@ layout = [
 
 # Callback für die Filterung der Daten basierend auf Dropdown-Auswahl
 @callback(
-    [Output('datatable', 'data'),
+    [Output('datatable', 'rowData'),
      Output('combined-chart', 'figure')],
     [Input('bundesland-dropdown', 'value')]
 )
@@ -95,7 +107,7 @@ def update_output(selected_bundeslaender):
                 marker=dict(size=8)
             )
         ],
-        'layout': go.Layout(
+        'layout': go.Layout(    
             title='Bettenkapazität und Auslastung nach Bundesland',
             yaxis=dict(
                 title='Anzahl Betten',
