@@ -1,9 +1,12 @@
 # Analyse des Gesundheitswesens mit Python &amp; Dash
 
+## Prolog
+
 Prosa folgt
 
+## Shortcuts
 - [Installation / Setup](doq/setup_install.md)
-
+- [Schichtenkommunikation - Seqenzdiagramm](doq/dad2.md)
 # Ausblick / To-Do
 
 
