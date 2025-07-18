@@ -29,10 +29,10 @@ autonumber
     Pandas ->> Plotly: Charts/Plots erstellen
     Pandas ->> Flask: Webinhalte anfordern 
     Flask --> Flask: Generiere HTML, CSS, Javascript
-    rect rgba(4, 43, 14, 1)
+    
     Flask->>User-Agent: Webinhalte liefern
     Note over User-Agent, Flask: HTTP-Request
-    end
+    
 
    
    
