@@ -43,6 +43,7 @@ class DataDictionary:
         "hau_a": "Hauptamtliche Ärzte",
         "na_p": "Nichtärztliches Personal",
         "na_p_pfleg": "Nichtärztliches Personal Pflege",
+        "insg": "Summe Personal",
         "datum": "Datum",
         "infekt_sum": "Gesamtzahl der Infektionen",
         "infekt_ink": "Zuwachs seit der letzten Meldung",

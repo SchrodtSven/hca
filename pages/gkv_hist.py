@@ -1,4 +1,4 @@
-# KH Grunddaten
+# Quantitative Entwicklung der GK
 # Projekt Health Care Analysis
 # AUTHOR Nadja Post, Sven Schrodt
 # SINCE 2025-07-14 - Allons enfants!

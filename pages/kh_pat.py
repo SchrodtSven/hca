@@ -1,4 +1,4 @@
-# Template für Dash page
+# Entwicklung der Krankenhaus- und Patientenanzahl
 # Projekt Health Care Analysis
 # AUTHOR Nadja Post, Sven Schrodt 
 # SINCE 2025-07-15

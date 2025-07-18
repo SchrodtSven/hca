@@ -1,4 +1,4 @@
-# Template für Unterseiten
+# Template für Unterseiten: -> save as $pages/{NEW_FILE_NAME}
 # Projekt Health Care Analysis
 # AUTHOR Nadja Post, Sven Schrodt
 # SINCE 2025-07-14 - Allons enfants!
@@ -8,14 +8,14 @@ import pandas as pd
 import dash_ag_grid as dag
 from dd import DataDictionary as dd
 import seaborn 
-sub_title = "Entwicklung der Krankenhaus- und Bettenanzahl"
+sub_title = "Dummy titel"
 
 
 df = pd.read_csv("data/23111-0001_de_san.csv", sep=";")
 start_val = ["anz_kh", "bett_10k", "bett_aus_dschn"]
 fig = px.line(df, x="jahr", y=['start_val'])
 # Dropdown mit Optionen
-opt = [{"label": " " + dd.raw[k] + " (" + k + ") ", "value": k} for k in tmp]
+#opt = [{"label": " " + dd.raw[k] + " (" + k + ") ", "value": k} for k in tmp]
 register_page(__name__)
 
 @callback(
@@ -39,12 +39,12 @@ layout = html.Div(
             columnSize="responsiveSizeToFit",
             dashGridOptions={"pagination": True},
         ),
-        dcc.Dropdown(
-            id="controls-and-check-item-basix",
-            options=opt,
-            value=start_val,
-            multi=True,
-        ),
+        # dcc.Dropdown(
+        #     id="controls-and-check-item-basix",
+        #     options=opt,
+        #     value=start_val,
+        #     multi=True,
+        # ),
         dcc.Graph(figure=fig, id="controls-and-graph"),
     ]
 )

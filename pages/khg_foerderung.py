@@ -1,4 +1,4 @@
-# Diagnosen nach ICD und Jahr
+# KHG-Investitionsfördermittel - Einzelförderung
 # Projekt Health Care Analysis
 # AUTHOR Nadja Post, Sven Schrodt 
 # SINCE 2025-07-14 - Allons enfants!

@@ -1,4 +1,4 @@
-# Template für Dash page
+# Bettenauslastung nach Bundesländern
 # Projekt Health Care Analysis
 # AUTHOR Nadja Post, Sven Schrodt 
 # SINCE 2025-07-15
