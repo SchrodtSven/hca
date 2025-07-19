@@ -22,7 +22,7 @@ autonumber
     User-Agent->>Flask: Request URI
     Note over User-Agent, Flask: HTTP-Request
     
-    Flask->>Dash: URI parsen
+    Flask->>Dash: URI parsing, bootstrapping http ctx
     Dash->>Pandas: request to getting data
     Pandas ->> CSV: Getting data
     Pandas ->> Dash: Work on data
