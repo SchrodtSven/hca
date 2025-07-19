@@ -9,7 +9,7 @@ import plotly.graph_objects as go
 import dash_mantine_components as dmc
 from dash import Dash, html, dash_table, dcc, callback, Output, Input
 import dash_bootstrap_components as dbc
-from dd import DataDictionary as dd
+from hca.dd import DataDictionary as dd
 
 data = pd.read_csv(r'data/Anzahl Betten Bundesländer.csv',
                    delimiter=';',

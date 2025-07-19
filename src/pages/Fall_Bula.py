@@ -10,7 +10,7 @@ import dash_ag_grid as dag
 import dash_mantine_components as dmc
 from dash import Dash, html, dash_table, dcc, callback, Output, Input, register_page
 import dash_bootstrap_components as dbc
-from dd import DataDictionary as dd
+from hca.dd import DataDictionary as dd
 
 
 data = pd.read_csv(r'data/Anzahl Betten Bundesländer.csv',

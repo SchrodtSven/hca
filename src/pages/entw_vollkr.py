@@ -6,7 +6,7 @@ from dash import dcc, html, Input, Output, callback, register_page
 import plotly.express as px
 import pandas as pd
 import dash_ag_grid as dag
-from dd import DataDictionary as dd
+from hca.dd import DataDictionary as dd
 frm = 2013
 to = 2023
 sub_title = f"Entwicklung der Vollkräfte  {frm} - {to}" 

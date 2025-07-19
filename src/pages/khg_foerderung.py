@@ -6,7 +6,7 @@ from dash import Dash, html, dash_table, dcc, callback, Output, Input, register_
 import plotly.express as px
 import dash_ag_grid as dag
 import pandas as pd
-from dd import DataDictionary as dd
+from hca.dd import DataDictionary as dd
 
 
 

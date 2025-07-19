@@ -22,8 +22,8 @@ import dash
 load_figure_template(["sandstone", "simplex"])
 
 # project libs
-from file_dd import FileDD
-from cfg import Cfg
+from hca.file_dd import FileDD
+from hca.cfg import Cfg
 
 # This stylesheet defines the "dbc" class.  Use it to style dash-core-components
 # and the dash DataTable with the bootstrap theme.

@@ -1,44 +1,44 @@
-# Setup Beispiel 
+# Setup Example 
 
-Komplett für  UNIX like OS (MacOS, Linux, Solaris etc.) -> für Wintendo Boxen mit Hinweisen
+For UNIX like OS (MacOS, Linux, Solaris etc.) -> hints for Wintendo boxes
 
-## Repo clonen
+## Cloning Repository
 
-<kbd>git clone https://github.com/nevsglueckauf/gesundheit</kbd>
+<kbd>git clone https://github.com/SchrodtSven/hca</kbd>
 
-<kbd>cd gesundheit</kbd>
+<kbd>cd hca</kbd>
 
 
 
 ## VENV
 
-### Virtuelle Umgebung einrichten
-<code>sven@Thanos gesundheit% </code><kbd>python3 -m venv .venv</kbd>
+### Install virtual environment
+<code>sven@Thanos hca% </code><kbd>python3 -m venv .venv</kbd>
 
-### Virtuelle Umgebung aktivieren
-<code>sven@Thanos gesundheit% </code><kbd>source .venv/bin/activate</kbd>
+### Activate virtual environment
+<code>sven@Thanos hca% </code><kbd>source .venv/bin/activate</kbd>
 
-<code><span style="color:green">(.venv)</span> sven@Thanos gesundheit% </code>
+<code><span style="color:green">(.venv)</span> sven@Thanos hca% </code>
 
-#### Für Wintendo Boxen:
+#### For Wintendo:
 
 ```PS
 .venv\Scripts\activate
 ```
 
-## Dependencies auflösen
+## Resolving dependencies 
 
-<code><span style="color:green">(.venv)</span> sven@Thanos gesundheit% </code><kbd>pip -r req.txt</kbd>
+<code><span style="color:green">(.venv)</span> sven@Thanos hca% </code><kbd>pip -r req.txt</kbd>
 
-## App starten
-Bootstrap starten mit Umlenkung von ```STDIN``` und ```STDOUT``` nach ```dev/null```
+## App start
+Bootstrappping with  ```STDIN``` and ```STDOUT``` to ```dev/null```
 
 ```sh
-(.venv) svenschrodt@Thanos gesundheit% python app.py > /dev/null  2>&1 &
+(.venv) svenschrodt@Thanos hca% python app.py > /dev/null  2>&1 &
 ```
 
-#### Für Wintendo Boxen:
+#### For Wintendo:
 
 ```PS
-Z:\gesundheit> py.exe app.py
+Z:\hca> py.exe app.py
 ```

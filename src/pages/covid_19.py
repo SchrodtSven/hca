@@ -6,12 +6,13 @@ from dash import Dash, html, dash_table, dcc, callback, Output, Input, register_
 import plotly.express as px
 import pandas as pd
 import dash_ag_grid as dag
-from dd import DataDictionary as dd
+from hca.dd import DataDictionary as dd
 
 sub_title = "Covid - nach Bundesland"
 register_page(__name__)
 
 df = pd.read_csv("data/covid22-23.csv", parse_dates=True)
+df.sort_values(by=['Datum'], inplace=True) 
 # print(df.tail())
 # print(df.Bundesland.unique())
 # exit()
@@ -23,6 +24,7 @@ ndf = df[df.Bundesland.isin(start_val)].iloc[::5]
 fig = px.line(
     ndf, x="Datum", y="Betten", color="Bettenart", 
 )
+ 
 
 
 @callback(
@@ -32,12 +34,13 @@ fig = px.line(
 def update_graph(col_chosen):
     ndf = df[df.Bundesland.isin(col_chosen)]#.iloc[::5]
     
-    return px.line(
+    fig =  px.line(
         data_frame=ndf,
         x="Datum",
         y="Betten",
         color="Bettenart",
     )
+ 
 
 layout = html.Div(
     [

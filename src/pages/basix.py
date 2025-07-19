@@ -7,7 +7,7 @@ from dash import Dash, html, dash_table, dcc, callback, Output, Input, register_
 import plotly.express as px
 import pandas as pd
 import dash_ag_grid as dag
-from dd import DataDictionary as dd
+from hca.dd import DataDictionary as dd
 
 
 # DataFrame erstellen

@@ -8,30 +8,30 @@ autonumber
     participant User-Agent
     end
 
-    box lightblue Python & Libs
+    box lightblue Python & libs
     participant Pandas
     participant Dash
     participant Plotly
     participant Flask
     end
 
-    box gray Datenquellen
+    box gray DataSources
     participant CSV
     end
     
-    User-Agent->>Flask: Anfrage URI
+    User-Agent->>Flask: Request URI
     Note over User-Agent, Flask: HTTP-Request
     
     Flask->>Dash: URI parsen
-    Dash->>Pandas: Daten anfordern
-    Pandas ->> CSV: Daten holen
-    Pandas ->> Dash: Daten aufbereitet weiterleiten
-    Pandas ->> Plotly: Charts/Plots erstellen
-    Pandas ->> Flask: Webinhalte anfordern 
-    Flask --> Flask: Generiere HTML, CSS, Javascript
+    Dash->>Pandas: request to getting data
+    Pandas ->> CSV: Getting data
+    Pandas ->> Dash: Work on data
+    Pandas ->> Plotly: Generate charts/plots
+    Pandas ->> Flask: Request web data
+    Flask --> Flask: Generate HTML, CSS, Javascriptx
     
-    Flask->>User-Agent: Webinhalte liefern
-    Note over User-Agent, Flask: HTTP-Request
+    Flask->>User-Agent: Delivering web contents
+    Note over User-Agent, Flask: HTTP-Response
     
 
    
