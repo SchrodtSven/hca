@@ -28,7 +28,8 @@ class FileDD:
         "Dad": "Dash-Architektur",
         "Quelle dta": "Quellen + Datenmanagement",
         "Ausblick": "Ausblick",
-        "Home": "Startseite"
+        "Home": "Homepage",
+        "Adm file": "Admin Files"
         
         
     }

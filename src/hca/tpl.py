@@ -1,4 +1,4 @@
-# Template für Unterseiten: -> save as $pages/{NEW_FILE_NAME}
+# Template for pages -> save as $pages/{NEW_FILE_NAME}
 # HCA - Health Care Analysis
 # AUTHOR Sven Schrodt
 # SINCE 2025-07-14 - Allons enfants!

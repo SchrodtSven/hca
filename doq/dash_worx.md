@@ -14,7 +14,7 @@ config:
 flowchart LR
     app_hca@{ shape: braces, label: "self written app"}
    
-    A@{ shape: manual-file, label: "Python"}
+    A@{ shape: card, label: "Python"}
     B@{ shape: tag-rect, label: "Dash"}
     C@{ shape: tag-rect, label: "Plotly"}
     D@{ shape: tag-rect, label: "Flask"}
@@ -36,7 +36,7 @@ flowchart LR
       end
 
       
-      js@{ shape: manual-file, label: "ECMAScript"}
+      js@{ shape: card, label: "ECMAScript"}
       d_js@{ shape: tag-rect, label: "Dash.js"}
       p_js@{ shape: tag-rect, label: "Plotly.js"}
       r_js@{ shape: tag-rect, label: "React.js"}
