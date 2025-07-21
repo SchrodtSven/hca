@@ -33,7 +33,4 @@ autonumber
     Flask->>User-Agent: Delivering web contents
     Note over User-Agent, Flask: HTTP-Response
     
-
-   
-   
 ```

@@ -30,7 +30,7 @@ class DataHelper:
     """
 
     @staticmethod
-    def flip_dct(dct: dict)-> dict:
+    def flip_dct(dct: dict) ->dict:
         """Flipping key <-> value of a Dictionary
 
         Args:

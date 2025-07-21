@@ -40,5 +40,5 @@ Bootstrappping with  ```STDIN``` and ```STDOUT``` to ```dev/null```
 #### For Wintendo:
 
 ```PS
-Z:\hca> py.exe app.py
+PS Z:\hca> py.exe app.py
 ```
