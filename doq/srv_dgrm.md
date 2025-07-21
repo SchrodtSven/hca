@@ -1,4 +1,13 @@
 ```mermaid
+zenuml
+    title Annotators
+    @Actor Alice
+    @Database Bob
+    Alice->Bob: Hi Bob
+    Bob->Alice: Hi Alice
+```
+
+```mermaid
 architecture-beta
     service dns(logos:aws-route53)[Route 53]
     service cf(logos:aws-cloudfront)[CloudFront]

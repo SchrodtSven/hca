@@ -14,9 +14,6 @@ import io
 
 sub_title = "Admin Files"
 
-
- 
-
 register_page(__name__)
 
  
