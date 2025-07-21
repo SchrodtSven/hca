@@ -7,7 +7,7 @@ Forked from [SchrodtSven/gesundheit](https://github.com/SchrodtSven/gesundheit/)
 
 ## Prologue
 
-Will follow ...
+Some prose will follow ...
 
 ## Shortcuts
 - [Installation / Setup](doq/setup_install.md)

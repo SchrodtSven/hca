@@ -25,8 +25,8 @@ flowchart TD
 
 
     js@{ shape: manual-file, label: "ECMAScript"}
-    d_js@{ shape: tag-rect, label: "Dash"}
-    p_js@{ shape: tag-rect, label: "Plotly"}
+    d_js@{ shape: tag-rect, label: "Dash.js"}
+    p_js@{ shape: tag-rect, label: "Plotly.js"}
     r_js@{ shape: tag-rect, label: "React.js"}
 
     js-- executes -->d_js
