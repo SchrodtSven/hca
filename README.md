@@ -11,6 +11,7 @@ Some prose will follow ...
 
 ## Shortcuts
 - [Installation / Setup](doq/setup_install.md)
+- [Dash architecture diagramm](doq/dash_worx.md)
 - [M-Tier - sequence diagramm](doq/dad2.md)
 
 

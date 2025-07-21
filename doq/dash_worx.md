@@ -21,9 +21,9 @@ flowchart LR
     E@{ shape: braces, label: "Managed by Dash"}
     
     F@{ shape: tag-rect, label: "hca - app"}
-    app_hca-- uses -->server--  uses -->user-agent
+    
     F
-  
+    app_hca-- uses -->server--  uses -->user-agent
    subgraph mbd
       E
       
