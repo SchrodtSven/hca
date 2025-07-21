@@ -1,6 +1,6 @@
 # Template für Dash page
-# Projekt Health Care Analysis
-# AUTHOR Nadja Post, Sven Schrodt 
+# HCA - Health Care Analysis
+# AUTHOR Sven Schrodt 
 # SINCE 2025-07-15
 import pandas as pd
 import plotly.express as px

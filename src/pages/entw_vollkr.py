@@ -1,6 +1,6 @@
 # Entwicklung der Vollkräfte
-# Projekt Health Care Analysis
-# AUTHOR Nadja Post, Sven Schrodt 
+# HCA - Health Care Analysis
+# AUTHOR Sven Schrodt 
 # SINCE 2025-07-14 - Allons enfants!
 from dash import dcc, html, Input, Output, callback, register_page
 import plotly.express as px

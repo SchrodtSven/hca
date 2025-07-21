@@ -1,12 +1,10 @@
-# Klasse als Data Dictionary für die Zuordnung:
-#   - Tabelle - Bedeutung - rel. Dateior
-#   - pages{FILENAME} -> Texin Navi
-# Projekt Health Care Analysis
-# AUTHOR Nadja Post, Sven Schrodt
+# Health Care Analysis
+# Data Dictionary mapping path to names 
+# AUTHOR Sven Schrodt
 # SINCE 2025-07-14 - Allons enfants!
 class FileDD:
 
-    # Diagnosen DE ins.
+    # ICD (International Statistical Classification of Diseases and Related Health Problems)
     de_icdn = "data/23131-0001_de_2_san.csv"
 
     codes = {
@@ -14,7 +12,6 @@ class FileDD:
     }
 
     pages = {
-        "  main  ": "Startseite",
         "Fall bula": "Fallzahlen nach Bundesl.",
         "Admin": "Admin",
         "Diagnosen": "ICD-Code",

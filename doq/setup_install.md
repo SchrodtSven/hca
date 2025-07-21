@@ -28,7 +28,7 @@ For UNIX like OS (MacOS, Linux, Solaris etc.) -> hints for Wintendo boxes
 
 ## Resolving dependencies 
 
-<code><span style="color:green">(.venv)</span> sven@Thanos hca% </code><kbd>pip -r req.txt</kbd>
+<code><span style="color:green">(.venv)</span> sven@Thanos hca% </code><kbd>pip -r requirements.txt</kbd>
 
 ## App start
 Bootstrappping with  ```STDIN``` and ```STDOUT``` to ```dev/null```

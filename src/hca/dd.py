@@ -1,6 +1,6 @@
 # Data dictionary class
-# Projekt Health Care Analysis
-# AUTHOR Nadja Post, Sven Schrodt 
+# HCA - Health Care Analysis
+# AUTHOR Sven Schrodt 
 # SINCE 2025-07-11
 class DataDictionary:
     """Data Dictionary

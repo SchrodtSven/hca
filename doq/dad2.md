@@ -28,7 +28,7 @@ autonumber
     Pandas ->> Dash: Work on data
     Pandas ->> Plotly: Generate charts/plots
     Pandas ->> Flask: Request web data
-    Flask --> Flask: Generate HTML, CSS, Javascriptx
+    Flask --> Flask: Generate HTML, CSS, ECMA-Script
     
     Flask->>User-Agent: Delivering web contents
     Note over User-Agent, Flask: HTTP-Response

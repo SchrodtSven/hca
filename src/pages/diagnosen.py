@@ -1,6 +1,6 @@
 # Diagnosen nach ICD und Jahr
-# Projekt Health Care Analysis
-# AUTHOR Nadja Post, Sven Schrodt 
+# HCA - Health Care Analysis
+# AUTHOR Sven Schrodt 
 # SINCE 2025-07-14 - Allons enfants!
 from dash import Dash, html, dash_table, dcc, callback, Output, Input, register_page
 import plotly.express as px
