@@ -5,7 +5,9 @@
 
 
 class Cfg:
-
+    """ Defining app-global configuration
+    
+    """
     title = "HCA  Health Care Analysis - Analysing German health care"
     debug = True
     version = 0.1

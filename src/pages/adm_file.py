@@ -22,7 +22,7 @@ import seaborn
 import base64
 import datetime
 import io
-
+from hca.cfg import Cfg
 sub_title = "Admin Files"
 
 register_page(__name__)
@@ -32,17 +32,7 @@ layout = html.Div(
     children=[
         html.H1(
             sub_title,
-            # style={'textAlign': 'center', 'color': '#FFFFFF'}
         ),
-        # dcc.Dropdown(
-        #     id="sep_csv",
-        #     options=[
-        #         {"label": ";", "value": ";"},
-        #         {"label": "TAB", "value": "\t"},
-        #         {"label": ",", "value": ","},
-        #     ],
-        #     value=";",
-        # ),
         dcc.Upload(
             id="upload-data",
             children=html.Div(["Drag and Drop or ", html.A("Select Files")]),
@@ -86,10 +76,6 @@ def parse_contents(contents, filename, date):
         [
             html.H5(filename),
             html.H6(datetime.datetime.fromtimestamp(date)),
-            # dash_table.DataTable(
-            #     df.to_dict('records'),
-            #     [{'name': i, 'id': i} for i in df.columns]
-            # ),
             dag.AgGrid(
                 id="main_grid_uploaded",
                 rowData=df.to_dict("records"),
@@ -101,10 +87,12 @@ def parse_contents(contents, filename, date):
             ),
             html.Hr(),  # horizontal line
             # For debugging, display the raw contents provided by the web browser
+            # FIXME 
+            # if Cfg.debug:
+            #     pass
+            #
             html.Div("Raw Content"),
             html.Pre(
-                #decoded[0:200] + "...",
-                '...',
                 style={"whiteSpace": "pre-wrap", "wordBreak": "break-all"},
             ),
         ]
