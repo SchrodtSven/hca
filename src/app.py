@@ -35,7 +35,7 @@ app = Dash(
     external_stylesheets=[dbc.themes.FLATLY, dbc_css],
     suppress_callback_exceptions=True,
 )
-app.title = Cfg.title
+app.title = Cfg.title.replace('HCA', f'HCA (vers. {Cfg.version})')
 #dash.register_page(__name__)
 navbar = dbc.NavbarSimple(
     [   

@@ -7,6 +7,6 @@
 class Cfg:
 
     title = "HCA  Health Care Analysis - Analysing German health care"
-    debug = False
+    debug = True
     version = 0.1
     since = '2025-07-20'

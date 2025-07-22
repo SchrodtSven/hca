@@ -1,4 +1,4 @@
-# Template für Dash page
+# Design &  Architecture Dossier
 # HCA - Health Care Analysis
 # AUTHOR Sven Schrodt 
 # SINCE 2025-07-15

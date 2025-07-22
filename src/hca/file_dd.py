@@ -29,7 +29,8 @@ class FileDD:
         "Quelle dta": "Quellen + Datenmanagement",
         "Ausblick": "Ausblick",
         "Home": "Homepage",
-        "Adm file": "Admin Files"
+        "Adm file": "Admin Files",
+        "Foo": "Testing page",
         
         
     }
