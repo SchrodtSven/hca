@@ -18,12 +18,19 @@ class Importer:
 
     bulletSize = 23
     lineWidth = 4
-
+    tl_id = 'timeline-foo'
     steps = {
         "stp_1": "Choose - File(s) and configure ",
-        "stp_2": "Configure - Row and Colums ",
+        "stp_2": "Configure - Rows and Colums ",
         "stp_3": "Preview -   ",
-        "stp_4": "Save -  ",
+        "stp_4": "Save -  "
+    }
+    
+    vld_vals = {
+        "stp_1": 0,
+        "stp_2": 1,
+        "stp_3": 2,
+        "stp_4": 3
     }
 
     def __init__(self):
@@ -38,6 +45,14 @@ class Importer:
         Returns:
             dmc.Timeline: time line with time line items
         """
+        
+
+        return dmc.Timeline(
+            active=active, bulletSize=self.bulletSize, lineWidth=self.lineWidth, children=self.gen_chld(), id=self.tl_id
+        )
+
+
+    def gen_chld(self): 
         children = []
         for k in self.steps:
             # print(self.steps[k])
@@ -57,11 +72,8 @@ class Importer:
                     ],
                 ),
             )
-
-        return dmc.Timeline(
-            active=active, bulletSize=self.bulletSize, lineWidth=self.lineWidth, children=children
-        )
-
+        return children
+    
     def parse_contents(self, contents, filename, date):
         content_type, content_string = contents.split(",")
 

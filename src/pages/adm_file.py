@@ -1,4 +1,4 @@
-# Template for pages -> save as $pages/{NEW_FILE_NAME}
+# Assisting file administration
 # HCA - Health Care Analysis
 # AUTHOR Sven Schrodt
 # SINCE 2025-07-14 - Allons enfants!
@@ -13,15 +13,11 @@ from dash import (
     register_page,
     State,
 )
-import plotly.express as px
+
 import pandas as pd
 import dash_ag_grid as dag
 from hca.dd import DataDictionary as dd
 from hca.import_assist import Importer
-import seaborn
-import base64
-import datetime
-import io
 from hca.cfg import Cfg
 sub_title = "Admin Files"
 
@@ -53,50 +49,6 @@ layout = html.Div(
     ]
 )
 
-
-def parse_contents(contents, filename, date):
-    content_type, content_string = contents.split(",")
-
-    decoded = base64.b64decode(content_string)
-
-    try:
-        if "csv" in filename:
-            # Assume that the user uploaded a CSV file
-            df = pd.read_csv(io.StringIO(decoded.decode("utf-8")), sep=";")
-        elif "xls" in filename:
-            # Assume that the user uploaded an excel file
-            df = pd.read_excel(io.BytesIO(decoded))
-
-        df.to_csv(f"uploads/{filename}", index=False)
-    except Exception as e:
-        print(e)
-        return html.Div(["There was an error processing this file."])
-
-    return html.Div(
-        [
-            html.H5(filename),
-            html.H6(datetime.datetime.fromtimestamp(date)),
-            dag.AgGrid(
-                id="main_grid_uploaded",
-                rowData=df.to_dict("records"),
-                columnDefs=[
-                    {"field": x, "headerName": x} for x in df.columns
-                ],  # df.columns],
-                columnSize="responsiveSizeToFit",
-                dashGridOptions={"pagination": True},
-            ),
-            html.Hr(),  # horizontal line
-            # For debugging, display the raw contents provided by the web browser
-            # FIXME 
-            # if Cfg.debug:
-            #     pass
-            #
-            html.Div("Raw Content"),
-            html.Pre(
-                style={"whiteSpace": "pre-wrap", "wordBreak": "break-all"},
-            ),
-        ]
-    )
 
 
 @callback(  

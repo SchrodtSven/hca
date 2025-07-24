@@ -28,11 +28,12 @@ from hca.cfg import Cfg
 # This stylesheet defines the "dbc" class.  Use it to style dash-core-components
 # and the dash DataTable with the bootstrap theme.
 dbc_css = "https://cdn.jsdelivr.net/gh/AnnMarieW/dash-bootstrap-templates/dbc.min.css"
-
+#external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = Dash(
     __name__,
     use_pages=True,
     external_stylesheets=[dbc.themes.FLATLY, dbc_css],
+    #external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css'],
     suppress_callback_exceptions=True,
 )
 app.title = Cfg.title.replace('HCA', f'HCA (vers. {Cfg.version})')

@@ -31,6 +31,9 @@ class FileDD:
         "Home": "Homepage",
         "Adm file": "Admin Files",
         "Foo": "Testing page",
+        "Bar": "Testing _new",
+        "Login": "Anmelden",
+        
         
         
     }
