@@ -10,16 +10,16 @@ class FormX:
         - Foo
     """
     
-    ph_new = 'New value for: '
+    ph_new = 'New value for:'
 
     def input_x(self, dta: list) -> list:
         """Generate list/group of input elements from dta
 
         Args:
-            dta (list): _description_
+            dta (list): list of names for input fields
 
         Raises:
-            ValueError: _description_
+            ValueError: If empty data set given
 
         Returns:
             list: list of (dcc.Input)

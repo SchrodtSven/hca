@@ -33,6 +33,8 @@ class FileDD:
         "Foo": "Testing page",
         "Bar": "Testing _new",
         "Login": "Anmelden",
+        "Todo": "Todo list",
+        "Form foo": "Form Foo",
         
         
         

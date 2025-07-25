@@ -19,6 +19,8 @@ import dash_ag_grid as dag
 from hca.dd import DataDictionary as dd
 from hca.import_assist import Importer
 from hca.cfg import Cfg
+
+
 sub_title = "Admin Files"
 
 register_page(__name__)
@@ -46,17 +48,19 @@ layout = html.Div(
             multiple=True,
         ),
         html.Div(id="output-data-upload"),
+        html.Div(children=[html.H1("Output new column names")]),
+        html.Output(children=[html.P(id="output-df-saved")]),
     ]
 )
 
 
-
-@callback(  
+@callback(
     Output("output-data-upload", "children"),
     Input("upload-data", "contents"),
-    #Input("sep_csv", "value"),
+    # Input("sep_csv", "value"),
     State("upload-data", "filename"),
     State("upload-data", "last_modified"),
+    prevent_initial_call=True,
 )
 def update_output(list_of_contents, list_of_names, list_of_dates):
     imp = Importer()
@@ -66,3 +70,16 @@ def update_output(list_of_contents, list_of_names, list_of_dates):
             for c, n, d in zip(list_of_contents, list_of_names, list_of_dates)
         ]
         return children
+
+
+@callback(
+    Output("output-df-saved", "children"),
+    Input("new_names", "children"),
+    # [Input("input_{}".format(_), "value") for _ in df.columns],
+)
+def save_edited_df(list_names):
+    r = [Input(x["props"]["id"], "value") for x in list_names]
+    for x in list_names:
+        print(State(x["props"]["id"], "value"))
+        print( x["props"]["id"], "value")
+    return r

@@ -12,11 +12,7 @@ sub_title = "Quantitative Entwicklung der GKV"
 df_f = pd.read_csv("data/gkv_fusion_san.csv")
 fig_2 = fig = px.line(df_f, x="Jahr", y="Anzahl")
 df = pd.read_csv("data/gkv_hist_san.csv")
-
-# opt = [{"label": " " + dd.raw[k] + " (" + k + ") ", "value": k} for k in tmp]
-# Anfangsbelegung
 tmp = list(df.columns)
-# Jahr ist obligatorisch (X-Achse)
 del tmp[0]
 
 
@@ -33,7 +29,6 @@ register_page(__name__)
 )
 def update_graph(col_chosen):
     fig = px.line(df, x="Jahr", y=col_chosen)
-    print(col_chosen)
     return fig
 
 
@@ -45,10 +40,9 @@ layout = html.Div(
             id="main_grid_basic",
             rowData=df.to_dict("records"),
             columnDefs=[
-                # "headerName": dd.raw[x]}
                 {"field": x, "headerName": x}
                 for x in df.columns
-            ],  # df.columns],
+            ],
             columnSize="responsiveSizeToFit",
             dashGridOptions={"pagination": True},
         ),

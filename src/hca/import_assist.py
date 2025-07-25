@@ -6,10 +6,11 @@ import dash_mantine_components as dmc
 import base64
 import datetime
 import io
-from dash import html
+from dash import html, dcc
 import dash_ag_grid as dag
 import pandas as pd
-
+from hca.formx import FormX
+form_x = FormX()
 class Importer:
     """Class for file imports:
     - csv
@@ -100,6 +101,10 @@ class Importer:
                 #     df.to_dict('records'),
                 #     [{'name': i, 'id': i} for i in df.columns]
                 # ),
+                html.Div(id ="new_names",
+                    children=form_x.input_x(list(df.columns))
+                    + [html.Button("Save", id="save-df-button")]
+                         ),
                 dag.AgGrid(
                     id="main_grid_uploaded",
                     rowData=df.to_dict("records"),
