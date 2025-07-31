@@ -35,6 +35,8 @@ class FileDD:
         "Login": "Anmelden",
         "Todo": "Todo list",
         "Form foo": "Form Foo",
+        "Playground": "Dash testing playground.",
+        "Kali c19": "C19 - KaLi"
         
         
         

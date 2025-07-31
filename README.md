@@ -7,6 +7,8 @@ Forked from [SchrodtSven/gesundheit](https://github.com/SchrodtSven/gesundheit/)
 
 ## Prologue
 
+The text content of existing pages willl be in German only (for now)
+
 Some prose will follow ...
 
 ## Shortcuts
@@ -20,6 +22,10 @@ Some prose will follow ...
 ### LOC
 
 ```sh
+
+
+
+cloc .--not-match-d="(node_modules|App/ios|App/android)"
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
