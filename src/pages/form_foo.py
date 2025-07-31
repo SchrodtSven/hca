@@ -13,6 +13,10 @@ from dash import (
 )
 import dash_bootstrap_components as dbc
 import dash
+from hca.cfg import Cfg
+
+if Cfg.debug:
+    register_page(__name__)
 
 dropdown_menu_items = [
     dbc.DropdownMenuItem("Deep thought", id="dropdown-menu-item-1"),
@@ -36,7 +40,6 @@ layout = html.Div(
         input_group,
     ]
 )
-register_page(__name__)
 style_todo = {"display": "inline", "margin": "10px"}
 style_done = {"textDecoration": "line-through", "color": "#888"}
 style_done.update(style_todo)

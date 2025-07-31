@@ -21,13 +21,15 @@ import dash_bootstrap_components as dbc
 from hca.dd import DataDictionary as dd
 from hca.import_assist import Importer
 from hca.formx import FormX
+from hca.cfg import Cfg
 import time
 
 step = 2
 imp = Importer()
 fh = FormX()
 sub_title = "Testing mutliple Inputs defining column names"
-register_page(__name__)
+if Cfg.debug:
+    register_page(__name__)
 col_x = (
     "id", "first", "last", "email",
     "tel", "url" 

@@ -20,11 +20,10 @@ from hca.dd import DataDictionary as dd
 from hca.import_assist import Importer
 from hca.cfg import Cfg
 
+if Cfg.debug:
+    register_page(__name__)
 
 sub_title = "Admin Files"
-
-register_page(__name__)
-
 
 layout = html.Div(
     children=[
@@ -81,5 +80,5 @@ def save_edited_df(list_names):
     r = [Input(x["props"]["id"], "value") for x in list_names]
     for x in list_names:
         print(State(x["props"]["id"], "value"))
-        print( x["props"]["id"], "value")
+        print(x["props"]["id"], "value")
     return r

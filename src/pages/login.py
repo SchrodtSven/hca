@@ -21,7 +21,8 @@ from hca.import_assist import Importer
 from hca.cfg import Cfg
 sub_title = "Login"
 
-register_page(__name__)
+if Cfg.debug:
+    register_page(__name__)
 
 email_input = html.Div(
     [

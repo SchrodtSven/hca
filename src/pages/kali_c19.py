@@ -11,7 +11,7 @@ from hca.dd import DataDictionary as dd
 import plotly.graph_objects as go
 
 # DataFrame
-dta = pd.read_csv("data/cv19/kali_san_new.csv")
+dta = pd.read_csv("data/cv19/kali_isodat.csv")
 sub_title = "Entwicklung Covid-19 Kamp-Lintfort"
 register_page(__name__)
 fig = px.line(dta[::2], x="isodat", y="Infektionen")

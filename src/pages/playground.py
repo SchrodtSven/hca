@@ -12,15 +12,15 @@ from dash import (
     register_page,
 )
 import dash_daq as daq
-
+from hca.cfg import Cfg
+if Cfg.debug:
+    register_page(__name__)
 theme = {
     "dark": True,
     "detail": "#007439",
     "primary": "#00EA64",
     "secondary": "#6E6E6E",
 }
-register_page(__name__)
-
 layout = html.Div(
     children=[
         daq.LEDDisplay(
